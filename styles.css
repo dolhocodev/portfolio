@@ -1,0 +1,899 @@
+/* Основні стилі */
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+    --spacing: 1.5rem;
+    --border-radius: 0.5rem;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    color: var(--dark);
+    background: linear-gradient(135deg, #f0f2f5 0%, #e6e9ef 100%);
+    min-height: 100vh;
+}
+
+.portfolio-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-container {
+    flex: 1;
+    padding: var(--spacing);
+}
+
+/* Навігаційна панель */
+.portfolio-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.nav-link i {
+    font-size: 1rem;
+}
+
+/* Основна стаття */
+.portfolio-article {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Коллаж зображень */
+.collage-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Заголовок статті */
+.article-header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.article-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.article-meta i {
+    margin-right: 0.3rem;
+}
+
+
+/* Оновлені стилі для блоку автора */
+.author-profile {
+    padding: 0.5rem 2rem;
+    margin: 0.5rem auto;
+    width: 100%;
+}
+
+.author-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.author-img {
+    width: 60px;
+    height: 60px;
+    margin-top: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0.3rem 0;
+}
+
+.author-content {
+    text-align: left;
+    width: 100%;
+    padding: 0 0.8rem;
+}
+
+.author-heading {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+.author-position {
+    color: var(--gray);
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.author-github {
+    color: var(--text-secondary, #64667e);
+    font-style: italic;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 0.2rem;
+    margin-left: 0;
+}
+.author-github:hover {
+    text-decoration: underline;
+    color: var(--primary);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+    
+}
+
+/* Стилі для highlight тексту */
+.highlight {
+    background-color: rgba(67, 97, 238, 0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.3rem;
+    font-weight: 500;
+}
+
+/* Адаптивність */
+@media (min-width: 768px) {
+    .author-card {
+        flex-direction: row;
+        padding: 1rem;
+        align-items: center;
+
+    }
+    
+    .author-img {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .author-card {
+        padding: 1.2rem;
+    }
+    
+    .author-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .author-heading {
+        font-size: 1.1rem;
+    }
+}
+
+/* Контент статті */
+.article-content {
+    padding: 0 2rem 2rem;
+}
+
+.article-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.article-content p {
+    color: var(--dark);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Секції */
+.section-title {
+    font-size: 1.75rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--primary);
+}
+
+/* Проекти */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-image {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.project-content {
+    padding: 1.2rem;
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: 0.5rem;
+}
+
+.project-meta span {
+    background: rgba(0,0,0,0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Навички */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 2px 8px rgba(0,0,0,0.08),
+        0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 4px 12px rgba(0,0,0,0.1),
+        0 8px 16px rgba(0,0,0,0.08);
+}
+
+.skill-item i {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.skill-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.skill-item p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.about-me {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.about-me p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Банер - Mobile First */
+.banner-container {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.banner {
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(63, 55, 201, 0.1) 100%);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.banner-text h3 {
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.banner-text p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.banner-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.banner-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.banner-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.banner-button i {
+    font-size: 0.9rem;
+}
+
+/* Планшетна версія */
+@media (min-width: 768px) {
+    .banner {
+        padding: 1.5rem 2rem;
+    }
+    
+    .banner-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .banner-text {
+        text-align: left;
+        flex: 1;
+        padding-right: 2rem;
+    }
+    
+    .banner-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .banner-button {
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+/* Десктопна версія */
+@media (min-width: 1024px) {
+    .banner {
+        height: 110px;
+        padding: 0 2rem;
+    }
+    
+    .banner-button {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+.version-badge {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    color: var(--primary);
+    background: rgba(67, 97, 238, 0.05);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    vertical-align: text-top;
+    text-decoration: none;
+    border: 1px solid rgba(67, 97, 238, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.github-username {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.github-username:hover {
+    opacity: 1;
+}
+
+.article-title {
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.article-title {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.version-link p {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contacts-text p {
+    color: var(--gray);
+    font-size: 0.875rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.contacts-button {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    color: var(--dark);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.contacts-button:hover {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-button::after {
+    content: "→";
+    font-size: 0.875rem;
+}
+
+/* Футер */
+.portfolio-footer {
+    background: var(--dark);
+    color: white;
+    padding: 3rem var(--spacing) 2rem;
+    margin-top: 0;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+    text-align: center;
+}
+
+.footer-meta {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--light-gray);
+}
+
+.code-signature {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.code-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+}
+
+.code-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.code-link:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-note {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Стилі для тегів */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem;
+    justify-content: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    background: rgba(67, 97, 238, 0.08);
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    border: 1px solid rgba(67, 97, 238, 0.15);
+}
+
+.tag::before {
+    content: '#';
+    margin-right: 0.3rem;
+    color: var(--primary);
+    opacity: 0.7;
+}
+
+.tag:hover {
+    background: rgba(67, 97, 238, 0.15);
+    transform: translateY(-1px);
+}
+
+.portfolio-article {
+    background: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Сторінка версій */
+.version-history {
+    margin-top: 2rem;
+}
+
+.version-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.version-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.version-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.version-changes {
+    padding-left: 1.5rem;
+}
+
+.version-changes li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Сторінка версій */
+.version-history {
+    margin-top: 2rem;
+}
+
+.version-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.version-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.version-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.version-changes {
+    padding-left: 1.5rem;
+}
+
+.version-changes li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+.version-changes li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: -1rem;
+}
+
+.version-changes pre {
+    background: rgba(0,0,0,0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Сторінка версій */
+.version-item {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+}
+
+.tech-badge.html { background: #e34c26; color: white; }
+.tech-badge.css { background: #2965f1; color: white; }
+.tech-badge.js { background: #f0db4f; color: black; }
+.tech-badge.react { background: #61dafb; color: black; }
+
+.version-details {
+    margin-top: 1.5rem;
+}
+
+.version-features h4,
+.version-tech h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tech-item h5 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.tech-item p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Хакерський username */
+.github-username {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.github-username::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.github-username:hover::after {
+    transform: scaleX(1);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 1rem;
+    }
+
+    .collage-container {
+        height: 300px;
+    }
+
+    .article-title {
+        font-size: 1.75rem;
+    }
+
+    .author-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .author-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

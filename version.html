@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал версій | Технічна документація</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tech-doc {
+            font-family: 'Fira Code', monospace;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Навігація */
+        .version-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .version-jump {
+            display: flex;
+            gap: 1rem;
+        }
+        .version-jump a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Версії */
+        .version-entry {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--light-gray);
+            scroll-margin-top: 1rem;
+        }
+        .version-header {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .version-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .version-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Технології */
+        .tech-stack {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+        }
+        .tech-stack h4 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tech-item {
+            background: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            box-shadow: var(--shadow);
+        }
+
+        /* Зміни */
+        .changes-list {
+            padding-left: 1.5rem;
+        }
+        .changes-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .changes-list li::before {
+            content: "→";
+            position: absolute;
+            left: -1rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="tech-doc">
+        <nav class="version-nav">
+            <a href="index.html" class="back-link">
+                <span>←</span>
+                Повернутися до портфоліо
+            </a>
+            <div class="version-jump">
+                <a href="#v1.1.0">v1.1.0</a>
+                <a href="#v1.0.0">v1.0.0</a>
+            </div>
+        </nav>
+
+        <h1>📝 Журнал версій</h1>
+        
+        <div class="version-entry" id="v1.1.0">
+            <div class="version-header">
+                <span class="version-number">v1.1.0</span>
+                <span class="version-date">15 липня 2023</span>
+            </div>
+            
+            <div class="tech-stack">
+                <h4>🛠 Використані технології:</h4>
+                <ul class="tech-list">
+                    <li class="tech-item">HTML5</li>
+                    <li class="tech-item">CSS3</li>
+                    <li class="tech-item">Flexbox</li>
+                    <li class="tech-item">CSS Grid</li>
+                </ul>
+            </div>
+            
+            <h3>🔄 Зміни:</h3>
+            <ul class="changes-list">
+                <li>Додано сторінку журналу версій</li>
+                <li>Оновлено дизайн контактного банера</li>
+                <li>Покращено адаптивність</li>
+            </ul>
+        </div>
+        
+        <div class="version-entry" id="v1.0.0">
+            <div class="version-header">
+                <span class="version-number">v1.0.0</span>
+                <span class="version-date">1 січня 2023</span>
+            </div>
+            
+            <div class="tech-stack">
+                <h4>🛠 Використані технології:</h4>
+                <ul class="tech-list">
+                    <li class="tech-item">HTML5</li>
+                    <li class="tech-item">CSS3</li>
+                </ul>
+            </div>
+            
+            <h3>🔄 Зміни:</h3>
+            <ul class="changes-list">
+                <li>Початкова версія портфоліо</li>
+                <li>Додано базові секції: про мене, навички, проекти</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє Портфоліо</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=VT323&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="portfolio-wrapper">
+        <div class="content-container">
+            <!-- Навігаційна панель -->
+            <nav class="portfolio-nav">
+                <a href="#" class="nav-link"><i class="fas fa-home"></i> Головна</a>
+                <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Проекти</a>
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> Про мене</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Контакти</a>
+            </nav>
+
+            <!-- Головний контент -->
+            <article class="portfolio-article">
+                <!-- Коллаж зображень -->
+                <div class="collage-container">
+                    <img src="src/img/1.jpg" alt="Моє портфоліо" class="main-image">
+                </div>
+
+                <!-- Заголовок та мета-інформація -->
+                <div class="article-header">
+                    <h1 class="article-title">Моє Портфоліо <a href="version.html" class="version-badge">v1.1.0</a></h1>
+                    <div class="article-meta">
+                        <span class="publish-date">08 квітня 2025</span>
+                        <span class="views-count">
+                            <i class="fas fa-eye"></i>
+                            1000 переглядів
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Інформація про автора -->
+                <div class="author-profile">
+                    <div class="author-card">
+                        <img src="src/img/unnamed.png" alt="Моя фотографія" class="author-img">
+                        <div class="author-content">
+                            <h3 class="author-heading">Владислав Д. <a href="https://github.com/dolhocodev" class="author-github">dolhocodev</a></h3>
+                            <p class="author-position">Fullstack Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Контент портфоліо -->
+                <div class="article-content">
+                    <div class="about-me" id="about">
+                        <h1>Привіт всім, хто завітав на мою скромну веб-сторінку!</h1>
+                        <p>Мене звати Владислав, і я — <span class="highlight">новачок у захопливому світі веброзробки</span>, але з серцем, повним ентузіазму та жаги до знань.</p>
+                    
+                        <p>Моя подорож у світ коду почалася зовсім недавно, але вже встигла мене поглинути з головою. Перші кроки я робив у знайомстві з фундаментальними будівельними блоками вебу — <span class="highlight">HTML та CSS</span>. Це було як перші дотики до чарівництва, коли безформні ідеї починали набувати структури та візуальної привабливості на екрані.</p>
+                    
+                        <p>Зараз я з великим інтересом занурююсь глибше у можливості <span class="highlight">JavaScript</span>. Кожен новий рядок коду — це як відкриття незвіданої кімнати, де логіка та креативність сплітаються в щось живе та інтерактивне. Мене неймовірно надихає процес <span class="highlight">створення чогось з абсолютної порожнечі</span>. Це відчуття схоже на складання конструктора LEGO, де кожна деталь, кожна команда на своєму місці, і ось перед тобою постає щось цілісне та функціональне.</p>
+                    
+                        <p>Цей сайт, який ви зараз бачите, — мій <span class="highlight">перший самостійний проєкт</span>. Він ще може бути простим і не досконалим, але для мене він є символом початку мого шляху, першою цеглинкою у фундаменті майбутньої кар'єри. Я розглядаю його як свій особистий майданчик для експериментів, де я можу втілювати нові ідеї, тестувати свої навички та документувати свій прогрес.</p>
+                    
+                        <p><span class="highlight">Навчання для мене — це не просто необхідність, а справжнє задоволення</span>. Кожен день приносить нові знання, нові виклики та нові можливості для зростання. Моя мета — не просто опанувати інструменти веброзробки, а й перетворити своє хобі на справу всього життя, на кар'єру, яка приносить радість та користь.</p>
+                    
+                        <p>Я щиро вдячний кожному, хто знайшов час зазирнути на мою сторінку. Ваша увага є для мене великою підтримкою та мотивацією продовжувати рухатися вперед. Буду радий, якщо ви залишите свої коментарі чи відгуки — вони є цінним джерелом навчання та натхнення для мене.</p>
+                    
+                    </div>
+                    
+                    <!-- Секція навичок -->
+                    <div class="skills-section">
+                        <h2 class="section-title">🛠 Навички</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <h3>HTML5</h3>
+                                <p>Комфортно почуваюся, верстаю з нуля</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <h3>CSS3</h3>
+                                <p>Люблю гнучкий дизайн, освоїв Flexbox і Grid</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <h3>JavaScript</h3>
+                                <p>Активно вивчаю, практикуюсь на задачах</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <h3>Git/GitHub</h3>
+                                <p>Починаю вивчати, вже створюю репозиторії</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Секція проектів -->
+                    <div class="projects-section" id="projects">
+                        <h2 class="section-title">🧩 Мої проєкти</h2>
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <img src="src/img/image.png" alt="Simple Portfolio" class="project-image">
+                                <div class="project-content">
+                                    <h3>Simple Portfolio</h3>
+                                    <p>Цей сайт — мій перший особистий проєкт. Повністю створений на HTML і CSS.</p>
+                                    <div class="project-meta">
+                                        <span>HTML/CSS</span>
+                                        <span>2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="src/img/image1.png" alt="DoggoConnect" class="project-image">
+                                <div class="project-content">
+                                    <h3>DoggoConnect (в розробці)</h3>
+                                    <p>Ідея міні-платформи для власників собак, щоб ділитися фото, зустрічатися на прогулянках.</p>
+                                    <div class="project-meta">
+                                        <span>React/Firebase</span>
+                                        <span>2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Банер -->
+                    <div class="banner-container" id="contact">
+                        <div class="banner">
+                            <div class="banner-content">
+                                <div class="banner-text">
+                                    <h3>📬 Зв'яжіться зі мною</h3>
+                                    <p>Відкритий до фідбеку, колаборацій і просто дружніх повідомлень</p>
+                                </div>
+                                <div class="banner-buttons">
+                                    <a href="mailto:dolhocodev@gmail.com" class="banner-button">
+                                        <i class="fas fa-envelope"></i> Email
+                                    </a>
+                                    <a href="https://t.me/wamisc" class="banner-button">
+                                        <i class="fab fa-telegram"></i> Telegram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Теги -->
+                <div class="tags-container">
+                    <span class="tag">Веб-розробка</span>
+                    <span class="tag">Дизайн</span>
+                    <span class="tag">Frontend</span>
+                </div>
+            </article>
+
+            <!-- Футер -->
+            <footer class="portfolio-footer">
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="https://github.com/dolhocodev" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/dolhocodev" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/dolhocodev" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://t.me/wamisc" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto=dolhocodev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="footer-meta">
+                        <p class="copyright">&copy; 2025 Портфоліо <span class="code-signature">// by dolhocodev</span></p>
+                        <p class="footer-note">Всі права захищені. Код доступний на <a href="https://github.com/dolhocodev/portfolio" class="code-link">GitHub</a>.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
